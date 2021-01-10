@@ -12,7 +12,7 @@ def main():
     copy_right = json_data['images'][0]['copyright']
     pic = get(pic_url, stream=True)
     if(pic.status_code == 200):
-        open(r'./pic/{0}.png'.format(copy_right), 'wb').write(pic.content)
+        open(r'./picture/{0}.png'.format(copy_right), 'wb').write(pic.content)
         print('Create Image Success!')
     else:
         print('Create Image Faild!')
