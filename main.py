@@ -33,12 +33,12 @@ def get_file_name(file_name):
         print("exits path_name:" + file_name)
         name = file_name.split(".")
         path_name = "." + name[1] + "_1." + name[2]
-        file_name = get_file_name(path_name)
+        temp = get_file_name(path_name)
     else:
         print("mkdir path_name:" + file_name)
         print("v2 path_name:" + file_name)
         return file_name
-    return path_name
+    return temp
 
     
 
