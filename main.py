@@ -11,7 +11,7 @@ def main():
     open(r'./json/{0}.json'.format(start_date), 'wb').write(api.content)
     print('save json file Success!')
     copy_right = json_data['images'][0]['copyright']
-    name = copyright.split("，")[0]
+    name = copy_right.split("，")[0]
     pic = get(pic_url, stream=True)
     if(pic.status_code == 200):
         open(r'./picture/{0}.png'.format(name), 'wb').write(pic.content)
