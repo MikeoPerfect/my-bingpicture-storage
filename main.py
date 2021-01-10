@@ -1,5 +1,6 @@
 import json
 from requests import get
+import re
 
 def main():
     api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
