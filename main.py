@@ -14,7 +14,8 @@ def main():
     print('save json file Success!')
 
     copy_right = json_data['images'][0]['copyright']
-    pic_name = re.split(" ｜,|，", copy_right)[0]
+    picc_name = re.split(",|，", copy_right)[0]
+    pic_name = re.split(" ", picc_name)[0]
     pic_file_name = r'./picture/{0}.png'.format(pic_name)
     pic = get(pic_url, stream=True)
     if(pic.status_code == 200):
