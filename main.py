@@ -4,7 +4,7 @@ import re
 import os
 
 def main():
-    api_url = r'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
+    api_url =  r'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
     api = get(api_url)
     json_data = json.loads(api.text)
     pic_url = r'https://www.bing.com{0}'.format(json_data['images'][0]['url'])
