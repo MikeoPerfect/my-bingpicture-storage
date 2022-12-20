@@ -55,4 +55,4 @@ jobs:
           github_token: ${{ secrets.BING_TOKEN }}
           force: true
           branch: main
-      - name: 'Create a Release'
+
