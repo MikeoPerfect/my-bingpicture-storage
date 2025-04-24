@@ -41,12 +41,15 @@ jobs:
       - name: 'Working'
         timeout-minutes: 350
         run: bash ./main.sh
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m " add a bing pic" -a
+          git commit -m "${{ steps.date.outputs.date }}, add a bing pic" -a
       - name: 'Push changes'
         uses: ad-m/github-push-action@v0.6.0
         with:
